@@ -8,10 +8,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link style={{textDecoration: 'none' }} to="/" className="logo">Logo</Link>
+        <Link style={{textDecoration: 'none' }} to="/" className="logo">PixelCode</Link>
         <Link style={{textDecoration: 'none' }} to="/explore" className="nav-item">Explore</Link>
         <Link style={{textDecoration: 'none' }} to="/problems" className="nav-item">Problems</Link>
-        <Link style={{textDecoration: 'none' }} to="/contest" className="nav-item">Contest</Link>
         <Link style={{textDecoration: 'none' }} to="/discuss" className="nav-item">Discuss</Link>
         <div className="nav-item dropdown">
           <span>Interview</span>
