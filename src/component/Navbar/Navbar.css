@@ -1,10 +1,11 @@
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #333;
+  color: white;
 }
 
 .navbar-left, .navbar-right {
@@ -61,16 +62,42 @@
   cursor: pointer;
 }
 
-.premium-btn {
-  background-color: #ff8c00;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
   color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  margin-left: 20px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
   cursor: pointer;
 }
 
-.premium-btn:hover {
-  background-color: #e07b00;
+.premium-btn, .sign-in-btn, .sign-out-btn {
+  padding: 8px 12px;
+  background-color: #f0ad4e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sign-in-btn {
+  background-color: #5bc0de;
+}
+
+.sign-out-btn {
+  background-color: #d9534f;
 }

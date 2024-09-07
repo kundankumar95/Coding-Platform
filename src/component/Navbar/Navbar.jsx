@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import notification from '../assets/image(2).png';
 import user from '../assets/image(1).png';
 
 const Navbar = () => {
+  const [isUserSignedIn, setIsUserSignedIn] = useState(false); 
+
+  const handleSignIn = () => {
+    setIsUserSignedIn(true); 
+  };
+
+  const handleSignOut = () => {
+    setIsUserSignedIn(false);
+  };
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -27,10 +36,20 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="navbar-right">
-        <img src={notification} alt="Notifications" className="icon" />
-        <img src={user} alt="User" className="icon" />
-        <Link style={{textDecoration: 'none' }} to="/premium" className="premium-btn">Premium</Link>
+       <div className="navbar-right">
+        {/* Conditionally render the icons and links based on user sign-in status */}
+        {isUserSignedIn ? (
+          <>
+            <img src={notification} alt="Notifications" className="icon" />
+            <img src={user} alt="User" className="icon" />
+            <Link to="/premium" className="premium-btn" style={{ textDecoration: 'none' }}>
+              Premium
+            </Link>
+            <button onClick={handleSignOut} className="sign-out-btn">Sign Out</button>
+          </>
+        ) : (
+          <button onClick={handleSignIn} className="sign-in-btn">Sign In</button>
+        )}
       </div>
     </nav>
   );
